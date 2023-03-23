@@ -8,8 +8,6 @@ class HelloActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHelloBinding
 
-    private var counter = INIT_COUNT
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHelloBinding.inflate(layoutInflater)
@@ -18,7 +16,8 @@ class HelloActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
-        binding.tvCount.text = counter.toString()
+        val intentExtra = intent.getIntExtra(MainActivity.INTENT_EXTRA_KEY, INIT_COUNT)
+        binding.tvCount.text = intentExtra.toString()
     }
 
     companion object {

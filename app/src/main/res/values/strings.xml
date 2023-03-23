@@ -7,4 +7,5 @@
     <string name="btn_location_text">open location</string>
     <string name="btn_sharetext_text">share text</string>
     <string name="btn_take_picture_text">take a picture</string>
+    <string name="share_text_with">Share this text with:</string>
 </resources>

@@ -2,4 +2,5 @@
 <resources>
     <dimen name="padding_layout">8dp</dimen>
     <dimen name="size_tv_count_text">160sp</dimen>
+    <dimen name="size_tv_hello">60sp</dimen>
 </resources>

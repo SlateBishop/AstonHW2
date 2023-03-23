@@ -3,4 +3,5 @@
     <string name="btn_say_hello_text">say hello</string>
     <string name="btn_count_text">count</string>
     <string name="tv_hello_text">Hello!</string>
+    <string name="et_hint">Some Text</string>
 </resources>

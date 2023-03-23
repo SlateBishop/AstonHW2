@@ -22,11 +22,6 @@ class MainActivity : AppCompatActivity() {
             btnCount.setOnClickListener {
                 countUp()
             }
-            btnSayHello.setOnClickListener {
-                val intent = Intent(this@MainActivity, HelloActivity::class.java)
-                intent.putExtra(INTENT_EXTRA_KEY, counter)
-                startActivity(intent)
-            }
             tvCount.text = counter.toString()
         }
     }
@@ -38,7 +33,6 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         private const val INIT_COUNT = 0
-        const val INTENT_EXTRA_KEY = "key"
     }
 
 }

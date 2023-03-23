@@ -7,11 +7,11 @@
     android:padding="@dimen/padding_layout"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnSayHello"
+    <EditText
+        android:id="@+id/etSomeText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_say_hello_text"
+        android:hint="@string/et_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +26,7 @@
         app:layout_constraintBottom_toTopOf="@id/btnCount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnSayHello"
+        app:layout_constraintTop_toBottomOf="@id/etSomeText"
         tools:text="0" />
 
     <Button

@@ -20,7 +20,7 @@
         android:id="@+id/tvCount"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="#FFFF00"
+        android:background="@color/tv_background"
         android:gravity="center"
         android:textSize="@dimen/size_tv_count_text"
         app:layout_constraintBottom_toTopOf="@id/btnCount"

@@ -1,6 +1,5 @@
 package ru.makulin.astonhw2
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import ru.makulin.astonhw2.databinding.ActivityMainBinding
@@ -14,7 +13,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        checkSavedData(savedInstanceState)
         initViews()
+    }
+
+    private fun checkSavedData(savedInstanceState: Bundle?) {
+        if (savedInstanceState != null) {
+            counter = savedInstanceState.getInt(BUNDLE_KEY, INIT_COUNT)
+        }
     }
 
     private fun initViews() {
@@ -33,6 +39,12 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         private const val INIT_COUNT = 0
+        private const val BUNDLE_KEY = "key"
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt(BUNDLE_KEY, counter)
+        super.onSaveInstanceState(outState)
     }
 
 }

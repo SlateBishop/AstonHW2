@@ -3,6 +3,7 @@ package ru.makulin.astonhw2
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ShareCompat
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             btnWebSite.setOnClickListener { openWeb() }
             btnLocation.setOnClickListener { openLocation() }
             btnShareText.setOnClickListener { shareText() }
-            btnTakePicture.setOnClickListener { }
+            btnTakePicture.setOnClickListener { openCamera() }
         }
     }
 
@@ -58,6 +59,15 @@ class MainActivity : AppCompatActivity() {
             .setChooserTitle(R.string.share_text_with)
             .setText(text)
             .startChooser()
+    }
+
+    private fun openCamera() {
+        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        try {
+            startActivity(intent)
+        } catch (e: Exception) {
+            makeToast(e.message)
+        }
     }
 
     private fun makeToast(message: String?) {
